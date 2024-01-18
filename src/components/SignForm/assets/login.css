@@ -1,0 +1,155 @@
+.loginContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark-color);
+}
+
+.loginDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myLogo {
+  color: var(--light-color);
+  display: flex;
+  text-align: left;
+  font-size: var(--normal);
+  padding: 1vh 0 2vh 1vw;
+  transition: 1s all ease-in-out;
+  text-decoration: none;
+}
+
+.myLogoHero {
+  color: var(--dark-color);
+  display: flex;
+  text-align: left;
+  font-size: var(--normal);
+  padding: 1vh 0 2vh 1vw;
+  transition: 1s all ease-in-out;
+  text-decoration: none;
+}
+
+.loginFormContainer {
+  background-color: white;
+  padding: 2vw;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vh;
+  /* padding-bottom: 2vh; */
+}
+
+.loginFormHeader {
+  color: var(--dark-color);
+  font-size: 2vw;
+}
+
+.loginFormLine {
+  border: 1px solid var(--dark-color);
+  width: 20vw;
+  margin: 3vh 0;
+}
+
+.loginSocials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 3vh;
+}
+
+.loginSocialsImg {
+  width: 15vw;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  box-shadow: rgba(122, 76, 7, 0.16) 0px 1px 4px;
+}
+
+.loginFormInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.loginFormInputs {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  padding: 0.5vw;
+  border-radius: 5px;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+}
+
+.loginFormInputs::placeholder {
+  color: var(--dark-color);
+}
+
+.loginText {
+  color: var(--dark-color);
+  margin-top: 4vh;
+  font-size: var(--very-small);
+  margin-bottom: 5vh;
+}
+
+.loginTextSpan {
+  color: var(--very-light-color);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--dark-color);
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+.loginFormBtn {
+  background-color: var(--dark-color);
+  color: var(--very-light-color);
+  border: none;
+  width: 100%;
+  padding: 2vh;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  justify-self: center;
+}
+
+/* signup */
+.signupContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark-color);
+}
+
+.signupFormInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  gap: 3vh;
+}
+
+.signupFormInputs {
+  width: 23vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  padding: 0.5vw;
+  border-radius: 5px;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+}

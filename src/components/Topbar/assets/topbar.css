@@ -1,0 +1,49 @@
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 0.5vw 4vw;
+  transition: background-color 0.3s ease; 
+}
+
+/* .topbarLogo {
+  font-size: var(--very-normal);
+  color: var(--light-color);
+  font-weight: 900;
+  text-decoration: none;
+} */
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--dark-color); /* Adjust the background color for the fixed state */
+}
+.userDash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.userDashImg {
+  width: 5vw;
+  height: 5vw;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10x solid var(--light-color);
+}
+
+.userResume {
+  background-color: var(--dark-color);
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+  padding: 0.5vw 2vw;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}

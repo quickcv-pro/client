@@ -1,0 +1,161 @@
+/*PROFILE INPUT*/
+.profileInputContainer {
+  background-color: white;
+  padding: 2vw 1vw;
+  width: 40vw;
+  border-radius: 10px;
+}
+
+.profileHeader {
+  display: flex;
+  color: var(--dark-color);
+  font-size: var(--very-small);
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4vh;
+}
+
+.profileInputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.generalShortInput {
+  border: 1px solid var(--dark-color);
+  height: 5vh;
+  padding: 5px;
+  width: 18vw;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: var(--dark-color);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: var(--dark-color);
+}
+
+.generalTextArea {
+  margin-top: 2vh;
+  width: 37.5vw;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  height: 15vh;
+  border-radius: 10px;
+  padding: 1vh;
+}
+
+/* ++++++++++++++++++++++++++++++++++++ */
+
+/* SKILLS */
+.skillsContainer {
+  background-color: white;
+  margin: 2vh 0;
+  padding: 2vw 1vw;
+  width: 40vw;
+  border-radius: 10px;
+  color: var(--dark-color);
+  
+
+}
+
+.skillsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2vh;
+  justify-content: center;
+}
+
+.skillsHero {
+  display: flex;
+  color: var(--dark-color);
+  font-size: var(--sub-header);
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  padding-right: 0.5vw
+}
+
+.skillsForm {
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 4vh;
+}
+
+.skillsFormInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.generalLongInput {
+  height: 5vh;
+  padding: 5px;
+  width: 37.5vw;
+  border-radius: 5px;
+  border: 1px solid var(--dark-color);
+}
+
+.generalTextArea {
+  height: 15vh;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid var(--dark-color);
+}
+
+/* +++++++++++++++++++++++++++++++++++++++ */
+
+/* PROF EXPERIENCE INPUT */
+.profExpDate {
+  display: flex;
+  
+  gap: 1vw;
+  justify-content: unset;
+  align-items: center;
+  justify-self: center;
+}
+
+.profExpDatesCheck {
+  margin-top: 2vh;
+}
+
+.profExpDates {
+  display: flex;
+  flex-direction: column;
+}
+
+.profExpDateInput {
+  height: 5vh;
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.profExpCheck {
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  margin-right: 5px;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++ */
+/* EDUCATION */
+
+

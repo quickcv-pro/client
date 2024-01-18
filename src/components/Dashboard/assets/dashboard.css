@@ -1,0 +1,86 @@
+.dashContainer {
+  height: 100%;
+  width: 100vw;
+  background-color: var(--light-color);
+}
+
+.dashMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+  color: var(--dark-color);
+}
+
+.dashMainHero {
+  font-size: var(--very-normal);
+}
+
+.dashCardContainer {
+  margin: 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw 6vw;
+}
+
+.dashCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 14vw;
+  border-radius: 5px;
+}
+
+.dashCardCvImg {
+  width: 14vw;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 5px 0;
+  transition: 1s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.dashCardCvImg:hover {
+  width: 14vw;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
+}
+
+.dashCardHeader {
+  font-weight: bold;
+  width: 12.5vw;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.dashCardText {
+  font-size: var(--very-small);
+  width: 13.5vw;
+  text-align: justify;
+  text-justify: distribute;
+}
+
+.loadMoreButton {
+  margin-bottom: 4vh;
+  font-size: var(--small);
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border: none;
+  padding: 1.4vh 5vw;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.dashLink {
+  text-decoration: none;
+  color: inherit
+}

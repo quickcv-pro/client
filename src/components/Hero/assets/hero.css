@@ -1,0 +1,118 @@
+.heroContainer {
+  background-color: #f2c76e;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroLink {
+  margin: 4vh;
+}
+
+.heroLogo {
+  width: 13vw;
+}
+
+.heroDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSubContainer {
+  justify-self: center;
+  background-color: #3e1800;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  justify-self: center;
+  text-align: center;
+  padding: 4vw 2vw 2vw 2vw;
+  gap: 5vw;
+}
+
+.heroText {
+  text-align: left;
+  color: #f2c76e;
+  line-height: 9vh;
+}
+
+.heroLargeText {
+  font-size: 6vw;
+}
+
+.heroSmallText {
+  line-height: 4vh;
+  padding: 5vh 0;
+  text-align: justify;
+}
+
+.heroImage {
+  width: 20vw;
+}
+
+.heroBtn {
+  padding: 1vh;
+  border: 1px solid #f2c76e;
+  color: #3e1800;
+  background-color: #f2c76e;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  font-weight: bold;
+  transition: 0.7s all ease-in-out;
+  width: 15vw;
+  height: 5vh;
+  text-decoration: none;
+}
+
+.heroBtn:hover {
+  padding: 1vh;
+  border: 1px solid #f2c76e;
+  color: #f2c76e;
+  background-color: #3e1800;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  font-weight: bold;
+  transition: 0.7s all ease-in-out;
+}
+
+.heroFoote5r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  bottom: 0;
+  gap: 1vw;
+}
+
+.heroFoote5r > button {
+  padding: 1vh 2vw;
+  border: 0;
+  color: #3e1800;
+  background-color: #f2c76e;
+  font-size: 1vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}

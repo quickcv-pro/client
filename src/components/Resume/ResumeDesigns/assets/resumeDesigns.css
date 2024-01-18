@@ -1,0 +1,93 @@
+.resGeneralContainer {
+  margin: 4vh 0;
+  background-color: white;
+  width: 52vw;
+  height: 150vh;
+  border-radius: 5px;
+}
+
+.classicHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.classicHeaderBio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.classicHeaderBio h1 {
+  font-size: 1.6vw;
+  margin-top: 4vh;
+  text-transform: uppercase;
+}
+
+.classicHeaderBio p {
+  font-size: 1vw;
+  font-weight: normal;
+}
+.classicLine {
+  border: 1px solid black;
+  width: 48vw;
+  margin: 2vh 0 1vh 0;
+}
+.classicHeaderLinks {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+  margin-top: 2vh;
+}
+
+.classicHeaderLinks p {
+  font-weight: normal;
+  margin-right: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9vw;
+  color: #333;
+}
+
+.classicHeaderProfile {
+  width: 93%;
+}
+
+.classicHeaderProfile p {
+  font-size: 0.9vw;
+  line-height: 3vh;
+  text-align: justify;
+  text-justify: distribute;
+}
+
+/* SKILL DESIGN */
+.skillDesignContainer {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  justify-content: space-between;
+  padding: 1vh 2vw;
+  flex-wrap: wrap;
+}
+
+.skillDesingCards {
+  /* width: 23vw;  Removed to allow flexible wrapping */
+}
+
+.skillDesingMain {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.skillDesingSub {
+  font-size: 0.9vw;
+  /* width: 23vw;  Removed to allow flexible wrapping */
+  text-align: justify;
+  text-justify: distribute;
+}
