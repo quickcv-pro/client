@@ -1,6 +1,6 @@
 .dashContainer {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background-color: var(--light-color);
 }
 
@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 4vh;
-  color: var(--dark-color);
+  color: var(--dark-color); 
 }
 
 .dashMainHero {
