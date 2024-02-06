@@ -7,7 +7,7 @@ import ClassicDesigns from "./ResumeDesigns/ClassicsDesign";
 import { useState } from "react";
 import Education from "./inputs/Education";
 import Certificate from "./inputs/Certificate";
-import Interest from "./inputs/Interest";
+import Interest from "./inputs/Interest";     
 import Project from "./inputs/Project";
 import Course from "./inputs/Course";
 import Award from "./inputs/Award";

@@ -19,9 +19,10 @@ const ProfileInput = ({ onInputChange }) => {
     bio: "",
   });
 
-   const handleExpandClick = () => {
-     setIsExpanded(!isExpanded);
-   };
+  // For Expand/Collapse Icon
+  const handleExpandClick = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   useEffect(() => {
     // Notify the parent component about the changes whenever the profileData changes
@@ -36,7 +37,6 @@ const ProfileInput = ({ onInputChange }) => {
     }));
   };
 
-  
   return (
     <div className="profileInputContainer">
       <div className="skillsHeader">
@@ -140,7 +140,7 @@ const ProfileInput = ({ onInputChange }) => {
             className="generalTextArea"
             placeholder="Profile Bio"
             name="bio"
-            value={profileData.bio}
+            value={profileData.bios}
             onChange={handleInputChange}
           />
         </div>

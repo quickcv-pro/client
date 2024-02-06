@@ -1,5 +1,6 @@
 import {
   ArticleOutlined,
+  FactCheck,
   PaidOutlined,
   TipsAndUpdatesOutlined,
 } from "@mui/icons-material";
@@ -39,6 +40,9 @@ const Hero = () => {
             </button>
             <button>
               Donate <PaidOutlined />{" "}
+            </button>
+            <button>
+              ATS Checker <FactCheck />{" "}
             </button>
           </div>
         </div>

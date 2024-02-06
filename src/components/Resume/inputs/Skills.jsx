@@ -7,7 +7,7 @@ const Skills = ({ onSkillsChange }) => {
 
   const [skillData, setSkillData] = useState({
     skill: "",
-    subSkills: "",
+    subSkill: "",
   });
 
   const handleExpandClick = () => {
@@ -44,9 +44,9 @@ const Skills = ({ onSkillsChange }) => {
             <input
               className="generalLongInput"
               type="text"
-              name="skill"
               placeholder="Skill"
-              value={skillData.skill}
+              name="skill"
+              value={skillData.skills}
               onChange={handleSkillsInputChange}
             />
           </div>
@@ -55,8 +55,8 @@ const Skills = ({ onSkillsChange }) => {
             <textarea
               className="generalTextArea"
               type="text"
-              name="subSkills"
               placeholder="sub-skills eg. Communication, Reading"
+              name="subSkill"
               value={skillData.subSkills}
               onChange={handleSkillsInputChange}
             />
