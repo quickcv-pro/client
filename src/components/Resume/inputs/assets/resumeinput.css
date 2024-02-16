@@ -91,7 +91,7 @@
 
 .skillsForm {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2vh;
   justify-content: center;
   align-items: center;
@@ -146,7 +146,7 @@
   gap: 1vw;
   justify-content: unset;
   align-items: center;
-  justify-self: center;
+  justify-self: left;
 }
 
 .profExpDatesCheck {

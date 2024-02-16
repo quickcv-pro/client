@@ -23,27 +23,24 @@ const ProfessionalExp = () => {
       {isExpanded && (
         <div className="skillsForm">
           <div className="skillsFormInput">
-            <label>Job Title</label>
             <input
               className="generalLongInput"
               type="text"
-              placeholder="eg. Customer Relation Officer"
+              placeholder="Position"
             />
           </div>
           <div className="skillsFormInput">
-            <label>Company</label>
             <input
               className="generalShortInput"
               type="text"
-              placeholder="Quick Cv"
+              placeholder="Company"
             />
           </div>
           <div className="skillsFormInput">
-            <label>Location</label>
             <input
               className="generalShortInput"
               type="text"
-              placeholder="Lagos, Nigeria"
+              placeholder="Location"
             />
           </div>
           <div className="profExpDate">
@@ -61,11 +58,10 @@ const ProfessionalExp = () => {
             </div>
           </div>
           <div className="skillsFormInput">
-            <label>Informations/Sub-Skills</label>
             <textarea
               className="generalTextArea"
               type="text"
-              placeholder="eg. Customer Relation, Good Communication"
+              placeholder="Informations or Skills used in this position"
             />
           </div>
           <button>Add +</button>
