@@ -12,7 +12,7 @@ import SkillsDesign from "./SkillsDesign";
 import ProfileDesign from "./ProfileDesign";
 
 const ClassicsDesign = ({ profileData, skillData }) => {
-  
+  console.log(skillData)
   return (
     <div className="resGeneralContainer">
       <ProfileDesign
@@ -30,11 +30,7 @@ const ClassicsDesign = ({ profileData, skillData }) => {
       />
       <div className="classicLine"></div>
       {skillData.map((skill, index) => (
-        <SkillsDesign
-          key={index}
-          skill={skill.skill}
-          subSkill={skill.subSkill}
-        />
+        <SkillsDesign key={index} skill={skill.skill} subSkill={skill.subSkill} />
       ))}
       <div className="classicLine"></div>
     </div>

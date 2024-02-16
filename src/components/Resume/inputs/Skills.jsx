@@ -46,6 +46,23 @@ const Skills = ({ onSkillsChange }) => {
     }));
   };
 
+  const handleDragStart = (e, index) => {
+    e.dataTransfer.setData("index", index);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = (e, index) => {
+    const dragIndex = e.dataTransfer.getData("index");
+    const newSkillsList = [...skillsList];
+    const skill = newSkillsList[dragIndex];
+    newSkillsList.splice(dragIndex, 1);
+    newSkillsList.splice(index, 0, skill);
+    setSkillsList(newSkillsList);
+  };
+
   return (
     <div className="skillsContainer">
       <div className="skillsHeader">
@@ -59,14 +76,23 @@ const Skills = ({ onSkillsChange }) => {
       </div>
       {isExpanded && (
         <div className="skillsForm">
-          {skillsList.map((item, index) => (
-            <div key={index} className="skillScroll">
-              <UnfoldMore sx={{ cursor: "grab" }} />
-              <p className="skillHeadScroll">{item.skill}</p>
-              {/* <p>{item.subSkill}</p> */}
-              <DeleteOutline className="deleteBtn" />
-            </div>
-          ))}
+          <div className="skillUpload">
+            {skillsList.map((item, index) => (
+              <div
+                key={index}
+                className="skillScroll"
+                draggable="true"
+                onDragStart={(e) => handleDragStart(e, index)}
+                onDragOver={(e) => handleDragOver(e)}
+                onDrop={(e) => handleDrop(e, index)}
+              >
+                <UnfoldMore sx={{ cursor: "grab" }} />
+                <p className="skillHeadScroll">{item.skill}</p>
+                {/* <p>{item.subSkill}</p> */}
+                <DeleteOutline className="deleteBtn" />
+              </div>
+            ))}
+          </div>
           {showInputFields && ( // Show input fields only when showInputFields is true
             <>
               <div className="skillsFormInput">

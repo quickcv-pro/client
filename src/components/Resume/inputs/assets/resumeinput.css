@@ -69,8 +69,6 @@
   width: 40vw;
   border-radius: 10px;
   color: var(--dark-color);
-  
-
 }
 
 .skillsHeader {
@@ -88,17 +86,36 @@
   justify-content: center;
   align-items: center;
   font-size: 1vw;
-  padding-right: 0.5vw
+  padding-right: 0.5vw;
 }
 
 .skillsForm {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2vh;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding-top: 4vh;
+  align-self: left !important;
+}
+
+.skillUpload {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+
+.skillScroll {
+  display: flex;
+  justify-content: left !important;
+  /* align-items: center; */
+  text-align: left;
+  gap: 3vw;
+  align-self: left;
+  justify-content: space-between;
+ 
 }
 
 .skillsFormInput {
@@ -126,7 +143,6 @@
 /* PROF EXPERIENCE INPUT */
 .profExpDate {
   display: flex;
-  
   gap: 1vw;
   justify-content: unset;
   align-items: center;
@@ -154,8 +170,5 @@
   margin-right: 5px;
 }
 
-
 /* +++++++++++++++++++++++++++++++++++++++ */
 /* EDUCATION */
-
-

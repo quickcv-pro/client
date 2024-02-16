@@ -32,6 +32,7 @@ const Resume = () => {
       <ResumeTopbar />
       <div className="resumeComponent">
         <div className="resumeContainer">
+          
           <ProfileInput onInputChange={handleInputChange} />
           <Skills onSkillsChange={handleSkillsInputChange} />
           <ProfessionalExp />
