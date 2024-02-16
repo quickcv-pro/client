@@ -3,7 +3,7 @@ import "./assets/resumeinput.css";
 import { useEffect, useState } from "react";
 
 const ProfileInput = ({ onInputChange }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const [profileData, setProfileData] = useState({
     fullName: "",
@@ -35,6 +35,7 @@ const ProfileInput = ({ onInputChange }) => {
       ...prevData,
       [name]: value,
     }));
+    
   };
 
   return (

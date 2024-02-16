@@ -16,14 +16,15 @@ import Publication from "./inputs/Publication";
 import Reference from "./inputs/Reference";
 
 const Resume = () => {
-  const [resumeData, setResumeData] = useState({});
+  const [profileData, setProfileData] = useState({});
+  const [skillData, setSkillData] = useState([]);
 
   const handleInputChange = (data) => {
-    setResumeData(data);
+    setProfileData(data);
   };
 
   const handleSkillsInputChange = (data) => {
-    setResumeData(data)
+    setSkillData(data);
   }
 
   return (
@@ -44,7 +45,7 @@ const Resume = () => {
           <Publication />
           <Reference />
         </div>
-        <ClassicDesigns profileData={resumeData} skillData={resumeData} />
+        <ClassicDesigns profileData={profileData} skillData={skillData} />
       </div>
     </div>
   );
