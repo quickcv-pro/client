@@ -34,7 +34,7 @@ const Resume = () => {
         <div className="resumeContainer">
           
           <ProfileInput onInputChange={handleInputChange} />
-          <Skills onSkillsChange={handleSkillsInputChange} />
+          <Skills onSkillsChange={handleSkillsInputChange}  />
           <ProfessionalExp />
           <Education />
           <Certificate />
