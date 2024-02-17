@@ -12,8 +12,8 @@ import SkillsDesign from "./SkillsDesign";
 import ProfileDesign from "./ProfileDesign";
 import ExperienceDesign from "./ExperienceDesign";
 
-const ClassicsDesign = ({ profileData, skillData, expData }) => {
-  console.log(expData);
+const ClassicsDesign = ({ profileData, skillData, expData, eduData}) => {
+  // console.log(expData);
   return (
     <div className="resGeneralContainer">
       <ProfileDesign
@@ -48,6 +48,19 @@ const ClassicsDesign = ({ profileData, skillData, expData }) => {
           startDate={exp.startDate}
           stopDate={exp.stopDate}
           info={exp.info}
+        />
+      ))}
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      {eduData.map((edu, index) => (
+        <ExperienceDesign
+          key={index}
+          school={edu.school}
+          field={edu.field}
+          city={edu.city}
+          startDate={edu.startDate}
+          stopDate={edu.endDate}
+          info={edu.info}
         />
       ))}
     </div>

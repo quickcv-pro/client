@@ -19,6 +19,7 @@ const Resume = () => {
   const [profileData, setProfileData] = useState({});
   const [skillData, setSkillData] = useState([]);
   const [expData, setExpData] = useState([]);
+  const [eduData, setEduData] = useState([]);
 
   const handleInputChange = (data) => {
     setProfileData(data);
@@ -28,9 +29,13 @@ const Resume = () => {
     setSkillData(data);
   };
 
-    const handleExpInputChange = (data) => {
-      setExpData(data);
-    };
+  const handleExpInputChange = (data) => {
+    setExpData(data);
+  };
+
+  const handleEduInputChange = (data) => {
+    setEduData(data);
+  };
 
   return (
     <div className="resumeMainContainer">
@@ -40,7 +45,7 @@ const Resume = () => {
           <ProfileInput onInputChange={handleInputChange} />
           <Skills onSkillsChange={handleSkillsInputChange} />
           <ProfessionalExp onExpChange={handleExpInputChange} />
-          <Education />
+          <Education onEduChange={handleEduInputChange}/>
           <Certificate />
           <Interest />
           <Project />
@@ -54,6 +59,7 @@ const Resume = () => {
           profileData={profileData}
           skillData={skillData}
           expData={expData}
+          eduData={eduData}
         />
       </div>
     </div>
