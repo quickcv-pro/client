@@ -11,6 +11,9 @@ const ExperienceDesign = (props) => {
             <span className="exPositionSpan">{props.position}</span>,{" "}
             {props.company}
           </p>
+          <div className="expInfo">
+            <p className="expInfoText">{props.info}</p>
+          </div>
         </div>
         <div className="expRight">
           <div className="expDate">

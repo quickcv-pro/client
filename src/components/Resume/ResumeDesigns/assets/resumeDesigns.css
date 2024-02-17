@@ -181,7 +181,7 @@
 
 .exPositionSpan {
   font-weight: bold;
-  font-style:normal;
+  font-style: normal;
 }
 
 .expRight {
@@ -191,7 +191,7 @@
   text-align: right;
 }
 
-.expDate{
+.expDate {
   display: flex;
   flex-direction: row;
   font-size: 1vw;
@@ -206,5 +206,16 @@
 
 .expLocationText {
   font-size: 1vw;
+}
 
+.expInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.expInfoText {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95vw;
+  margin-top: 1.5vh;
 }

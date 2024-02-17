@@ -1,3 +1,3 @@
 git add .
-git commit -m "experience section completed"
+git commit -m "experience section"
 git push
