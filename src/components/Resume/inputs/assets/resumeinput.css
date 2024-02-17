@@ -1,3 +1,64 @@
+/* GENNERAL INPUT DESIGN */
+
+.saveButton {
+  background: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+  padding: 1vh 2.5vw;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2vh;
+}
+
+.addButton {
+  background: white;
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  padding: 1vh 2.4vw;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  background-color: var(--dark-color);
+  /* padding: 1vh; */
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+
+.generalTextArea {
+  margin-top: 2vh;
+  width: 37.5vw;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  height: 15vh;
+  border-radius: 10px;
+  padding: 1vh;
+}
+
+.skillScroll {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* text-align: left; */
+  gap: 3vw;
+  align-self: left;
+  width: 35vw;
+  text-align: left;
+}
+
+.skillHeadScroll {
+  text-align: left;
+}
+
+/* 
+++++++++++++++++++++++++++++++++++++++
+*/
+
 /*PROFILE INPUT*/
 .profileInputContainer {
   background-color: white;
@@ -49,16 +110,6 @@
   color: var(--dark-color);
 }
 
-.generalTextArea {
-  margin-top: 2vh;
-  width: 37.5vw;
-  color: var(--dark-color);
-  border: 2px solid var(--dark-color);
-  height: 15vh;
-  border-radius: 10px;
-  padding: 1vh;
-}
-
 /* ++++++++++++++++++++++++++++++++++++ */
 
 /* SKILLS */
@@ -104,23 +155,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
 }
 
-.skillScroll {
+.formContainer {
   display: flex;
-  justify-content: left !important;
-  /* align-items: center; */
-  text-align: left;
-  gap: 3vw;
-  align-self: left;
-  justify-content: space-between;
- 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
 }
 
 .skillsFormInput {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .generalLongInput {

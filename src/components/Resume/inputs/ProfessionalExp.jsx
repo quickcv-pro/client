@@ -1,28 +1,34 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./assets/resumeinput.css";
-import { ExpandMore, Business, Remove, UnfoldMore, DeleteOutline } from "@mui/icons-material";
+import {
+  ExpandMore,
+  Business,
+  Remove,
+  UnfoldMore,
+  DeleteOutline,
+  Edit,
+} from "@mui/icons-material";
 
 const ProfessionalExp = ({ onExpChange }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [showInputFields, setShowInputFields] = useState(false); // New state to control input field visibility
+  const [showInputFields, setShowInputFields] = useState(false);
   const [expList, setExpList] = useState([]);
-
   const [expData, setExpData] = useState({
     position: "",
     company: "",
     location: "",
     startDate: "",
     stopDate: "",
-    // current: "",
     info: "",
   });
+  const [editingIndex, setEditingIndex] = useState(null);
 
   const handleExpandClick = () => {
     setIsExpanded(!isExpanded);
   };
 
   const handleAddButtonClick = () => {
-    setShowInputFields(true); // Show input fields when "Add" button is clicked
+    setShowInputFields(true);
   };
 
   const handleApplyButtonClick = () => {
@@ -34,7 +40,6 @@ const ProfessionalExp = ({ onExpChange }) => {
       expData.stopDate &&
       expData.info
     ) {
-      // Format start and stop dates
       const startDate = new Date(expData.startDate);
       const startMonthYear = startDate.toLocaleString("en-US", {
         month: "short",
@@ -53,7 +58,14 @@ const ProfessionalExp = ({ onExpChange }) => {
         stopDate: stopMonthYear,
       };
 
-      setExpList([...expList, formattedExpData]); // Add current skill and subskill to the skillsList array
+      if (editingIndex !== null) {
+        const updatedExpList = [...expList];
+        updatedExpList[editingIndex] = formattedExpData;
+        setExpList(updatedExpList);
+        setEditingIndex(null);
+      } else {
+        setExpList([...expList, formattedExpData]);
+      }
       setExpData({
         position: "",
         company: "",
@@ -65,9 +77,7 @@ const ProfessionalExp = ({ onExpChange }) => {
     }
   };
 
-
   useEffect(() => {
-    // Notify the parent component about the changes whenever the skillsList changes
     onExpChange(expList);
   }, [expList, onExpChange]);
 
@@ -96,6 +106,19 @@ const ProfessionalExp = ({ onExpChange }) => {
     setExpList(newExpList);
   };
 
+  const handleEditClick = (index) => {
+    const expToEdit = expList[index];
+    setExpData(expToEdit);
+    setEditingIndex(index);
+    setShowInputFields(true);
+  };
+
+  const handleDeleteClick = (index) => {
+    const updatedExpList = [...expList];
+    updatedExpList.splice(index, 1);
+    setExpList(updatedExpList);
+  };
+
   return (
     <div className="skillsContainer">
       <div className="skillsHeader">
@@ -120,9 +143,18 @@ const ProfessionalExp = ({ onExpChange }) => {
                 onDrop={(e) => handleDrop(e, index)}
               >
                 <UnfoldMore sx={{ cursor: "grab" }} />
-                <p className="skillHeadScroll">{item.company}</p>{" "}
+                <p className="skillHeadScroll">{item.company}</p>
                 <p className="skillHeadScroll">{item.stopDate}</p>
-                <DeleteOutline className="deleteBtn" />
+                <div className="actionButtons">
+                  <Edit
+                    className="actionBtn"
+                    onClick={() => handleEditClick(index)}
+                  />
+                  <DeleteOutline
+                    className="actionBtn"
+                    onClick={() => handleDeleteClick(index)}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -179,17 +211,6 @@ const ProfessionalExp = ({ onExpChange }) => {
                     onChange={handleExpInputChange}
                   />
                 </div>
-                {/* <div className="profExpDatesCheck">
-                  <input
-                    className="profExpCheck"
-                    type="checkbox"
-                    id="currentJob"
-                    name="current"
-                    value={expData.current}
-                    onChange={handleExpInputChange}
-                  />
-                  <label>CurrentJob</label>
-                </div> */}
               </div>
               <div className="skillsFormInput">
                 <textarea
@@ -206,7 +227,7 @@ const ProfessionalExp = ({ onExpChange }) => {
               </button>
             </>
           )}
-          {!showInputFields && ( // Show "Add" button when showInputFields is false
+          {!showInputFields && (
             <button className="addButton" onClick={handleAddButtonClick}>
               Add+
             </button>
