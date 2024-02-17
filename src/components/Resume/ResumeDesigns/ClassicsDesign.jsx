@@ -10,9 +10,10 @@ import {
 import "./assets/resumeDesigns.css";
 import SkillsDesign from "./SkillsDesign";
 import ProfileDesign from "./ProfileDesign";
+import ExperienceDesign from "./ExperienceDesign";
 
-const ClassicsDesign = ({ profileData, skillData }) => {
-  console.log(skillData)
+const ClassicsDesign = ({ profileData, skillData, expData }) => {
+  console.log(expData);
   return (
     <div className="resGeneralContainer">
       <ProfileDesign
@@ -30,9 +31,25 @@ const ClassicsDesign = ({ profileData, skillData }) => {
       />
       <div className="classicLine"></div>
       {skillData.map((skill, index) => (
-        <SkillsDesign key={index} skill={skill.skill} subSkill={skill.subSkill} />
+        <SkillsDesign
+          key={index}
+          skill={skill.skill}
+          subSkill={skill.subSkill}
+        />
       ))}
       <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      {expData.map((exp, index) => (
+        <ExperienceDesign
+          key={index}
+          position={exp.position}
+          company={exp.company}
+          location={exp.location}
+          startDate={exp.startDate}
+          stopDate={exp.stopDate}
+          info={exp.info}
+        />
+      ))}
     </div>
   );
 };

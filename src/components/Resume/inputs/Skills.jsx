@@ -28,13 +28,12 @@ const Skills = ({ onSkillsChange }) => {
 
   const handleApplyButtonClick = () => {
     if (skillData.skill && skillData.subSkill) {
-      setSkillsList([...skillsList, skillData]); // Add current skill and subskill to the skillsList array
-      setSkillData({ skill: "", subSkill: "" }); // Clear input fields
+      setSkillsList([...skillsList, skillData]);
+      setSkillData({ skill: "", subSkill: "" });
     }
   };
 
   useEffect(() => {
-    // Notify the parent component about the changes whenever the skillsList changes
     onSkillsChange(skillsList);
   }, [skillsList, onSkillsChange]);
 

@@ -7,7 +7,7 @@ import ClassicDesigns from "./ResumeDesigns/ClassicsDesign";
 import { useState } from "react";
 import Education from "./inputs/Education";
 import Certificate from "./inputs/Certificate";
-import Interest from "./inputs/Interest";     
+import Interest from "./inputs/Interest";
 import Project from "./inputs/Project";
 import Course from "./inputs/Course";
 import Award from "./inputs/Award";
@@ -18,6 +18,7 @@ import Reference from "./inputs/Reference";
 const Resume = () => {
   const [profileData, setProfileData] = useState({});
   const [skillData, setSkillData] = useState([]);
+  const [expData, setExpData] = useState([]);
 
   const handleInputChange = (data) => {
     setProfileData(data);
@@ -25,17 +26,20 @@ const Resume = () => {
 
   const handleSkillsInputChange = (data) => {
     setSkillData(data);
-  }
+  };
+
+    const handleExpInputChange = (data) => {
+      setExpData(data);
+    };
 
   return (
     <div className="resumeMainContainer">
       <ResumeTopbar />
       <div className="resumeComponent">
         <div className="resumeContainer">
-          
           <ProfileInput onInputChange={handleInputChange} />
           <Skills onSkillsChange={handleSkillsInputChange} />
-          <ProfessionalExp />
+          <ProfessionalExp onExpChange={handleExpInputChange} />
           <Education />
           <Certificate />
           <Interest />
@@ -46,7 +50,11 @@ const Resume = () => {
           <Publication />
           <Reference />
         </div>
-        <ClassicDesigns profileData={profileData} skillData={skillData} />
+        <ClassicDesigns
+          profileData={profileData}
+          skillData={skillData}
+          expData={expData}
+        />
       </div>
     </div>
   );

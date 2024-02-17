@@ -149,3 +149,62 @@
   align-items: center;
 } */
 
+/* 
+++++++++++++++++++++++++++++++++++++++++
+*/
+
+/* EXPERIENCE */
+.expContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding-left: 2vw;
+  margin-bottom: 2vh;
+}
+
+.exptTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.expLeft {
+  width: 38vw;
+}
+
+.expPosition {
+  font-size: 1vw;
+  font-style: italic;
+}
+
+.exPositionSpan {
+  font-weight: bold;
+  font-style:normal;
+}
+
+.expRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+}
+
+.expDate{
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateline {
+  border: 1px solid #333;
+  width: 1vw;
+}
+
+.expLocationText {
+  font-size: 1vw;
+
+}
