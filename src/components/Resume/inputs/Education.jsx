@@ -33,32 +33,32 @@ const Education = ({ onEduChange }) => {
   };
 
   const handleApplyButtonClick = () => {
+    // Check if at least one input field is not empty
     if (
-      eduData.school &&
-      eduData.field &&
-      eduData.startDate &&
-      eduData.endDate &&
-      eduData.city &&
-      eduData.country &&
+      eduData.school ||
+      eduData.field ||
+      eduData.startDate ||
+      eduData.endDate ||
+      eduData.city ||
+      eduData.country ||
       eduData.info
     ) {
-      const startDate = new Date(eduData.startDate);
-      const startMonthYear = startDate.toLocaleString("en-US", {
-        month: "short",
-        year: "numeric",
-      });
-
-      const stopDate = new Date(eduData.stopDate);
-      const stopMonthYear = stopDate.toLocaleString("en-US", {
-        month: "short",
-        year: "numeric",
-      });
-
-      const formattedEduData = {
-        ...eduData,
-        startDate: startMonthYear,
-        stopDate: stopMonthYear,
-      };
+      // Format dates if present
+      let formattedEduData = { ...eduData };
+      if (eduData.startDate) {
+        const startDate = new Date(eduData.startDate);
+        formattedEduData.startDate = startDate.toLocaleString("en-US", {
+          month: "short",
+          year: "numeric",
+        });
+      }
+      if (eduData.endDate) {
+        const endDate = new Date(eduData.endDate);
+        formattedEduData.endDate = endDate.toLocaleString("en-US", {
+          month: "short",
+          year: "numeric",
+        });
+      }
 
       if (editingIndex !== null) {
         const updatedEduList = [...eduList];
@@ -79,6 +79,21 @@ const Education = ({ onEduChange }) => {
       });
     }
   };
+
+   const handleEditClick = (index) => {
+     // Set the data of the item being edited to input fields
+     const eduToEdit = eduList[index];
+     setEduData(eduToEdit);
+     setEditingIndex(index);
+     setShowInputFields(true);
+   };
+
+   const handleDeleteClick = (index) => {
+     // Remove the item from the Edus list
+     const updatedEduList = [...eduList];
+     updatedEduList.splice(index, 1);
+     setEduList(updatedEduList);
+   };
 
   useEffect(() => {
     onEduChange(eduList);

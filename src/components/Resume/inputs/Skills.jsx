@@ -28,21 +28,21 @@ const Skills = ({ onSkillsChange }) => {
     setShowInputFields(true); // Show input fields when "Add" button is clicked
   };
 
-  const handleApplyButtonClick = () => {
-    if (skillData.skill && skillData.subSkill) {
-      if (editingIndex !== null) {
-        // If editing an existing item, update it
-        const updatedSkillsList = [...skillsList];
-        updatedSkillsList[editingIndex] = skillData;
-        setSkillsList(updatedSkillsList);
-        setEditingIndex(null); // Reset editing index after updating
-      } else {
-        // If not editing, add a new item
-        setSkillsList([...skillsList, skillData]);
-      }
-      setSkillData({ skill: "", subSkill: "" });
+const handleApplyButtonClick = () => {
+  // Check if at least one input field is not empty
+  if (skillData.skill || skillData.subSkill) {
+    if (editingIndex !== null) {
+      const updatedSkillsList = [...skillsList];
+      updatedSkillsList[editingIndex] = skillData;
+      setSkillsList(updatedSkillsList);
+      setEditingIndex(null);
+    } else {
+      setSkillsList([...skillsList, skillData]);
     }
-  };
+    setSkillData({ skill: "", subSkill: "" });
+  }
+};
+
 
   const handleEditClick = (index) => {
     // Set the data of the item being edited to input fields

@@ -32,31 +32,31 @@ const ProfessionalExp = ({ onExpChange }) => {
   };
 
   const handleApplyButtonClick = () => {
+    // Check if at least one input field is not empty
     if (
-      expData.position &&
-      expData.company &&
-      expData.location &&
-      expData.startDate &&
-      expData.stopDate &&
+      expData.position ||
+      expData.company ||
+      expData.location ||
+      expData.startDate ||
+      expData.stopDate ||
       expData.info
     ) {
-      const startDate = new Date(expData.startDate);
-      const startMonthYear = startDate.toLocaleString("en-US", {
-        month: "short",
-        year: "numeric",
-      });
-
-      const stopDate = new Date(expData.stopDate);
-      const stopMonthYear = stopDate.toLocaleString("en-US", {
-        month: "short",
-        year: "numeric",
-      });
-
-      const formattedExpData = {
-        ...expData,
-        startDate: startMonthYear,
-        stopDate: stopMonthYear,
-      };
+      // Format dates if present
+      let formattedExpData = { ...expData };
+      if (expData.startDate) {
+        const startDate = new Date(expData.startDate);
+        formattedExpData.startDate = startDate.toLocaleString("en-US", {
+          month: "short",
+          year: "numeric",
+        });
+      }
+      if (expData.stopDate) {
+        const stopDate = new Date(expData.stopDate);
+        formattedExpData.stopDate = stopDate.toLocaleString("en-US", {
+          month: "short",
+          year: "numeric",
+        });
+      }
 
       if (editingIndex !== null) {
         const updatedExpList = [...expList];
