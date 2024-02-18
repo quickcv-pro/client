@@ -24,6 +24,7 @@ const ClassicsDesign = ({
   certData,
   interestData,
   projectData,
+  courseData,
 }) => {
   // console.log(expData);
   return (
@@ -115,6 +116,24 @@ const ClassicsDesign = ({
             city={project.city}
             country={project.country}
             info={project.info}
+          />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">COURSES COMPLETED</p>
+      <div className="mainColumnContainer">
+        {courseData.map((course, index) => (
+          <ProjectDesign
+            key={index}
+            title={course.title}
+            institute={course.institute}
+            startDate={course.startDate}
+            endDate={course.endDate}
+            city={course.city}
+            country={course.country}
+            info={course.info}
           />
         ))}
       </div>

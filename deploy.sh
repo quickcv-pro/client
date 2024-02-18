@@ -1,3 +1,3 @@
 git add .
-git commit -m "Project section | complete"
+git commit -m "course section | complete"
 git push
