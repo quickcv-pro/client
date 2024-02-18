@@ -1,3 +1,3 @@
 git add .
-git commit -m "certification section | input pssed succesfuly to design"
+git commit -m "Interest section | complete"
 git push

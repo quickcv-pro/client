@@ -9,6 +9,13 @@
   align-items: center; */
 }
 
+.mainColumnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-left: 2vw;
+}
+
 .resGeneralContainer {
   margin: 4vh 0;
   background-color: white;
@@ -244,4 +251,22 @@
 .certDate {
   font-size: 0.8vw;
   font-style: italic;
+}
+
+/* 
+++++++++++++++++++++++++++++++++++
+*/
+
+.mainInterestContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+}
+
+.interestContainer {
+  line-height: 2vh;
+}
+
+.interestText {
+  font-size: 0.8vw;
 }

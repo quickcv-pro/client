@@ -93,7 +93,7 @@ const ClassicsDesign = ({
       <div className="classicLine"></div>
       {/* Iterate over expData and render ExperienceDesign component */}
       <p className="mainHeader">INTEREST | HOBBY</p>
-      <div className="mainRowContainer">
+      <div className="mainInterestContainer">
         {interestData.map((interest, index) => (
           <InterestDesign key={index} interest={interest.interest} />
         ))}

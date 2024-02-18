@@ -2,8 +2,8 @@ import React from "react";
 
 const InterestDesign = (props) => {
   return (
-    <div>
-      <p>{props.interest}</p>
+    <div className="interestContainer">
+      <p className="interestText">{props.interest}</p>
     </div>
   );
 };
