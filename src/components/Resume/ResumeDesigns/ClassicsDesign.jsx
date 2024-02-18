@@ -14,6 +14,7 @@ import ExperienceDesign from "./ExperienceDesign";
 import EducationDesign from "./EducationDesign";
 import CertificationDesign from "./CertificationDesign";
 import InterestDesign from "./InterestDesign";
+import ProjectDesign from "./ProjectDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -22,6 +23,7 @@ const ClassicsDesign = ({
   eduData,
   certData,
   interestData,
+  projectData,
 }) => {
   // console.log(expData);
   return (
@@ -70,7 +72,7 @@ const ClassicsDesign = ({
           city={edu.city}
           country={edu.country}
           startDate={edu.startDate}
-          stopDate={edu.endDate}
+          endDate={edu.endDate}
           info={edu.info}
         />
       ))}
@@ -96,6 +98,24 @@ const ClassicsDesign = ({
       <div className="mainInterestContainer">
         {interestData.map((interest, index) => (
           <InterestDesign key={index} interest={interest.interest} />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">PROJECT</p>
+      <div className="mainColumnContainer">
+        {projectData.map((project, index) => (
+          <ProjectDesign
+            key={index}
+            title={project.title}
+            subTitle={project.subTitle}
+            startDate={project.startDate}
+            endDate={project.endDate}
+            city={project.city}
+            country={project.country}
+            info={project.info}
+          />
         ))}
       </div>
     </div>

@@ -1,3 +1,3 @@
 git add .
-git commit -m "Interest section | complete"
+git commit -m "Project section | complete"
 git push
