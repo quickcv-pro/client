@@ -1,3 +1,3 @@
 git add .
-git commit -m "certification section | cert flexed row"
+git commit -m "certification section | input pssed succesfuly to design"
 git push

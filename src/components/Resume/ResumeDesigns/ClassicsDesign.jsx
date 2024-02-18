@@ -13,6 +13,7 @@ import ProfileDesign from "./ProfileDesign";
 import ExperienceDesign from "./ExperienceDesign";
 import EducationDesign from "./EducationDesign";
 import CertificationDesign from "./CertificationDesign";
+import InterestDesign from "./InterestDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -20,6 +21,7 @@ const ClassicsDesign = ({
   expData,
   eduData,
   certData,
+  interestData,
 }) => {
   // console.log(expData);
   return (
@@ -85,6 +87,15 @@ const ClassicsDesign = ({
             link={cert.link}
             dDate={cert.dDate}
           />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">INTEREST | HOBBY</p>
+      <div className="mainRowContainer">
+        {interestData.map((interest, index) => (
+          <InterestDesign key={index} interest={interest.interest} />
         ))}
       </div>
     </div>
