@@ -194,4 +194,6 @@
   margin-top: 0.5vh;
   width: 37vw;
   margin-left: 1vw;
+  text-align: justify;
+  text-justify: distribute;
 }

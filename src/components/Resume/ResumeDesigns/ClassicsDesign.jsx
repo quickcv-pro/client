@@ -11,6 +11,7 @@ import "./assets/resumeDesigns.css";
 import SkillsDesign from "./SkillsDesign";
 import ProfileDesign from "./ProfileDesign";
 import ExperienceDesign from "./ExperienceDesign";
+import EducationDesign from "./EducationDesign";
 
 const ClassicsDesign = ({ profileData, skillData, expData, eduData}) => {
   // console.log(expData);
@@ -53,7 +54,7 @@ const ClassicsDesign = ({ profileData, skillData, expData, eduData}) => {
       <div className="classicLine"></div>
       {/* Iterate over expData and render ExperienceDesign component */}
       {eduData.map((edu, index) => (
-        <ExperienceDesign
+        <EducationDesign
           key={index}
           school={edu.school}
           field={edu.field}
