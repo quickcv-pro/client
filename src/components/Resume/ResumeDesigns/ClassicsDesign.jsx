@@ -59,6 +59,7 @@ const ClassicsDesign = ({ profileData, skillData, expData, eduData}) => {
           school={edu.school}
           field={edu.field}
           city={edu.city}
+          country={edu.country}
           startDate={edu.startDate}
           stopDate={edu.endDate}
           info={edu.info}

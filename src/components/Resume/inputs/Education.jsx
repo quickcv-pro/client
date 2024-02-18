@@ -20,6 +20,7 @@ const Education = ({ onEduChange }) => {
     startDate: "",
     endDate: "",
     city: "",
+    country: "",
     info: "",
   });
 
@@ -38,6 +39,7 @@ const Education = ({ onEduChange }) => {
       eduData.startDate &&
       eduData.endDate &&
       eduData.city &&
+      eduData.country &&
       eduData.info
     ) {
       const startDate = new Date(eduData.startDate);
@@ -72,6 +74,7 @@ const Education = ({ onEduChange }) => {
         startDate: "",
         endDate: "",
         city: "",
+        country: "",
         info: "",
       });
     }

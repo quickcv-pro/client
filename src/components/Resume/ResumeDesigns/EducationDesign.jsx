@@ -22,7 +22,7 @@ const EducationDesign = (props) => {
               <ArrowRightAlt sx={{ fontSize: "1vw" }} /> <p>{props.stopDate}</p>
             </div>
             <div className="expLocation">
-              <p className="expLocationText">{props.location}</p>
+              <p className="expLocationText">{props.city}, {props.country}</p>
             </div>
           </div>
         </div>
