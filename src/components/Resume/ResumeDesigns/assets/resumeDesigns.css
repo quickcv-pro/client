@@ -1,4 +1,14 @@
 /* General design */
+.mainRowContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-left: 2vw;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+}
+
 .resGeneralContainer {
   margin: 4vh 0;
   background-color: white;
@@ -20,7 +30,12 @@
   align-self: center;
 }
 
-
+.mainHeader {
+  font-size: 0.8vw;
+  font-weight: bold;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+}
 
 /* Profile Design */
 
@@ -196,4 +211,37 @@
   margin-left: 1vw;
   text-align: justify;
   text-justify: distribute;
+}
+
+/* 
++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.mainCertContainer {
+}
+
+.certContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  /* gap: 2vh; */
+}
+
+.certCert {
+  font-size: 0.8vw;
+  font-weight: 900;
+}
+
+.certOrg {
+  font-size: 0.8vw;
+}
+
+.certLink {
+  font-size: 0.8vw;
+}
+
+.certDate {
+  font-size: 0.8vw;
+  font-style: italic;
 }

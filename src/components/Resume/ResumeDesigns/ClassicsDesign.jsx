@@ -72,17 +72,21 @@ const ClassicsDesign = ({
           info={edu.info}
         />
       ))}
+
       <div className="classicLine"></div>
       {/* Iterate over expData and render ExperienceDesign component */}
-      {certData.map((cert, index) => (
-        <CertificationDesign
-          key={index}
-          certification={cert.certification}
-          organization={cert.organization}
-          link={cert.link}
-          dDate={cert.dDate}
-        />
-      ))}
+      <p className="mainHeader">CERTIFICATIONS</p>
+      <div className="mainRowContainer">
+        {certData.map((cert, index) => (
+          <CertificationDesign
+            key={index}
+            certification={cert.certification}
+            organization={cert.organization}
+            link={cert.link}
+            dDate={cert.dDate}
+          />
+        ))}
+      </div>
     </div>
   );
 };

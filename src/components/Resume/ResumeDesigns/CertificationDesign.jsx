@@ -2,11 +2,20 @@ import React from "react";
 
 const CertificationDesign = (props) => {
   return (
-    <div>
-      <p>{props.certification}</p>
-      <p>{props.organization}</p>
-      <p>{props.link}</p>
-      <p>{props.dDate}</p>
+    <div className="mainCertContainer">
+      <div className="certContainer">
+        <p className="certCert">{props.certification}</p>
+        <p className="certOrg">{props.organization}</p>
+        <a
+          className="certLink"
+          href={props.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Link
+        </a>
+        <p className="certDate">{props.dDate}</p>
+      </div>
     </div>
   );
 };
