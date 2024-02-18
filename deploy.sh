@@ -1,3 +1,3 @@
 git add .
-git commit -m "education section | edit and delete button bug fixed"
+git commit -m "certification section | passed from input to design page"
 git push

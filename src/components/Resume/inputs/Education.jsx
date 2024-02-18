@@ -80,20 +80,20 @@ const Education = ({ onEduChange }) => {
     }
   };
 
-   const handleEditClick = (index) => {
-     // Set the data of the item being edited to input fields
-     const eduToEdit = eduList[index];
-     setEduData(eduToEdit);
-     setEditingIndex(index);
-     setShowInputFields(true);
-   };
+  const handleEditClick = (index) => {
+    // Set the data of the item being edited to input fields
+    const eduToEdit = eduList[index];
+    setEduData(eduToEdit);
+    setEditingIndex(index);
+    setShowInputFields(true);
+  };
 
-   const handleDeleteClick = (index) => {
-     // Remove the item from the Edus list
-     const updatedEduList = [...eduList];
-     updatedEduList.splice(index, 1);
-     setEduList(updatedEduList);
-   };
+  const handleDeleteClick = (index) => {
+    // Remove the item from the Edus list
+    const updatedEduList = [...eduList];
+    updatedEduList.splice(index, 1);
+    setEduList(updatedEduList);
+  };
 
   useEffect(() => {
     onEduChange(eduList);
