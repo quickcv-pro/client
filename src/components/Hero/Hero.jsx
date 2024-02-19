@@ -8,10 +8,18 @@ import "./assets/hero.css";
 import typewriter from "./assets/tp.png";
 import { Link } from "react-router-dom";
 import logodark from "../../assets/logodark.png";
+import Modal from "../Modal/Modal"
+import { useState } from "react";
 
 const Hero = () => {
-  return (
-    <div className="heroContainer">
+  const [modalState, setModalState] = useState(false);
+  function toggleModal(){
+    setModalState(!modalState)
+  }
+    return (
+      <div className="heroContainer">
+      {modalState && <Modal 
+      closeModal={toggleModal} />}
       <Link className="heroLink" to="/">
         <img className="heroLogo" src={logodark} alt="" />
       </Link>
@@ -38,7 +46,8 @@ const Hero = () => {
             <button>
               Suggest something for us <TipsAndUpdatesOutlined />
             </button>
-            <button>
+            <button
+              onClick={() => toggleModal()}>
               Donate <PaidOutlined />{" "}
             </button>
             <button>

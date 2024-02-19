@@ -1,0 +1,34 @@
+#donateModalBG{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+        position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    }
+    #donateModal{
+    border-radius: 20px;
+
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    background-color: var(--main-color);
+    }
+#xButtonCont{
+    width: -webkit-fill-available;
+}
+#xButtonCont {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: end;
+}
+#xIcon{
+    width: 30px;
+    height: 30px;
+    margin-right: -10px;
+    margin-top: -10px;
+    cursor: pointer;
+}
