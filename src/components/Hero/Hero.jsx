@@ -19,6 +19,7 @@ const Hero = () => {
     return (
       <div className="heroContainer">
       {modalState && <Modal 
+      header="Choose your prefered payment method"
       closeModal={toggleModal} />}
       <Link className="heroLink" to="/">
         <img className="heroLogo" src={logodark} alt="" />
@@ -46,7 +47,7 @@ const Hero = () => {
             <button>
               Suggest something for us <TipsAndUpdatesOutlined />
             </button>
-            <button
+            <button className="Donate"
               onClick={() => toggleModal()}>
               Donate <PaidOutlined />{" "}
             </button>
