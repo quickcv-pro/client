@@ -1,6 +1,6 @@
 import React from 'react'
 import './Modal.css'
-import x from "./x.png"
+import x from "./assets/x.png"
 
 const Modal = (props) => {
     return (
