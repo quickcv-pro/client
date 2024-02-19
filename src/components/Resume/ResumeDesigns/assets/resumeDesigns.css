@@ -207,7 +207,7 @@
 .expInfo {
   display: flex;
   flex-direction: column;
-   width: 37vw;
+  width: 37vw;
 }
 
 .expInfoText {
@@ -270,4 +270,48 @@
 
 .interestText {
   font-size: 0.8vw;
+}
+
+/* 
++++++++++++++++++++++++++++++++
+*/
+
+/* AWARDS */
+
+.awardContainer {
+  margin-left: 2vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.awardTitle {
+  font-weight: bold;
+  font-size: 0.8vw;
+}
+
+.hrefLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.awardBody {
+  font-size: 0.8vw;
+}
+
+.awardDate {
+  font-size: 0.8vw;
+  font-weight: 100;
+}
+
+.awardInfo {
+  font-size: 0.8vw;
+  width: 20vw;
+  text-align: justify;
+  text-justify: distribute;
 }

@@ -24,6 +24,7 @@ const Resume = () => {
   const [interestData, setInterestData] = useState([]);
   const [projectData, setProjectData] = useState([]);
   const [courseData, setCourseData] = useState([]);
+  const [awardData, setAwardData] = useState([]);
 
   const handleInputChange = (data) => {
     setProfileData(data);
@@ -57,6 +58,10 @@ const Resume = () => {
     setCourseData(data);
   };
 
+  const handleAwardInputChange = (data) => {
+    setAwardData(data);
+  };
+
   return (
     <div className="resumeMainContainer">
       <ResumeTopbar />
@@ -69,8 +74,8 @@ const Resume = () => {
           <Certificate onCertChange={handleCertInputChange} />
           <Interest onInterestChange={handleInteretInputChange} />
           <Project onProjectChange={handleProjectInputChange} />
-          <Course onCourseChange={handleCourseInputChange}/>
-          <Award />
+          <Course onCourseChange={handleCourseInputChange} />
+          <Award onAwardChange={handleAwardInputChange} />
           <Organization />
           <Publication />
           <Reference />
@@ -84,6 +89,7 @@ const Resume = () => {
           interestData={interestData}
           projectData={projectData}
           courseData={courseData}
+          awardData={awardData}
         />
       </div>
     </div>

@@ -15,6 +15,7 @@ import EducationDesign from "./EducationDesign";
 import CertificationDesign from "./CertificationDesign";
 import InterestDesign from "./InterestDesign";
 import ProjectDesign from "./ProjectDesign";
+import AwardDesign from "./AwardDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -25,6 +26,7 @@ const ClassicsDesign = ({
   interestData,
   projectData,
   courseData,
+  awardData,
 }) => {
   // console.log(expData);
   return (
@@ -122,18 +124,16 @@ const ClassicsDesign = ({
 
       <div className="classicLine"></div>
       {/* Iterate over expData and render ExperienceDesign component */}
-      <p className="mainHeader">COURSES COMPLETED</p>
-      <div className="mainColumnContainer">
-        {courseData.map((course, index) => (
-          <ProjectDesign
+      <p className="mainHeader">AWARDS</p>
+      <div className="mainRowContainer">
+        {awardData.map((award, index) => (
+          <AwardDesign
             key={index}
-            title={course.title}
-            institute={course.institute}
-            startDate={course.startDate}
-            endDate={course.endDate}
-            city={course.city}
-            country={course.country}
-            info={course.info}
+            title={award.title}
+            body={award.body}
+            link={award.link}
+            endDate={award.endDate}
+            info={award.info}
           />
         ))}
       </div>

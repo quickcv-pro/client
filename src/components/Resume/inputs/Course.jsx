@@ -75,8 +75,8 @@ const Course = ({ onCourseChange }) => {
 
   const handleEditClick = (index) => {
     // Set the data of the item being edited to input fields
-    const CourseToEdit = CourseList[index];
-    setCourseData(CourseToEdit);
+    const courseToEdit = courseList[index];
+    setCourseData(courseToEdit);
     setEditingIndex(index);
     setShowInputFields(true);
   };
