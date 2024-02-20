@@ -103,7 +103,9 @@
   bottom: 0;
   gap: 1vw;
 }
-
+.Donate{
+  cursor: pointer;
+}
 .heroFoote5r > button {
   padding: 1vh 2vw;
   border: 0;
