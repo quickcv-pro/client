@@ -9,6 +9,7 @@ import ProjectDesign from "./ProjectDesign";
 import AwardDesign from "./AwardDesign";
 import OrganizationDesign from "./OrganizationDesign";
 import PublicationDesign from "./PublicationDesign";
+import ReferenceDesign from "./ReferenceDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -22,6 +23,7 @@ const ClassicsDesign = ({
   awardData,
   orgData,
   pubData,
+  refData,
 }) => {
   return (
     <div className="resGeneralContainer">
@@ -161,6 +163,24 @@ const ClassicsDesign = ({
             link={pub.link}
             endDate={pub.endDate}
             info={pub.info}
+          />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">REFERENCE</p>
+      <div className="mainRowContainer">
+        {refData.map((ref, index) => (
+          <ReferenceDesign
+            key={index}
+            name={ref.name}
+            job={ref.job}
+            company={ref.company}
+            email={ref.email}
+            phone={ref.phone}
+            city={ref.city}
+            country={ref.country}
           />
         ))}
       </div>

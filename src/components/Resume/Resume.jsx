@@ -27,6 +27,7 @@ const Resume = () => {
   const [awardData, setAwardData] = useState([]);
   const [orgData, setOrgData] = useState([]);
   const [pubData, setPubData] = useState([]);
+  const [refData, setRefData] = useState([]);
 
   const handleInputChange = (data) => {
     setProfileData(data);
@@ -68,9 +69,13 @@ const Resume = () => {
     setOrgData(data);
   };
 
-   const handlePubInputChange = (data) => {
-     setPubData(data);
-   };
+  const handlePubInputChange = (data) => {
+    setPubData(data);
+  };
+
+  const handleRefInputChange = (data) => {
+    setRefData(data);
+  };
 
   return (
     <div className="resumeMainContainer">
@@ -88,7 +93,7 @@ const Resume = () => {
           <Award onAwardChange={handleAwardInputChange} />
           <Organization onOrgChange={handleOrgInputChange} />
           <Publication onPubChange={handlePubInputChange} />
-          <Reference />
+          <Reference onRefChange={handleRefInputChange} />
         </div>
         <ClassicDesigns
           profileData={profileData}
@@ -102,6 +107,7 @@ const Resume = () => {
           awardData={awardData}
           orgData={orgData}
           pubData={pubData}
+          refData={refData}
         />
       </div>
     </div>

@@ -1,3 +1,3 @@
 git add .
-git commit -m "publication section | fetched succesfully"
+git commit -m "reference section | fetched succesfully and all other pages completed"
 git push
