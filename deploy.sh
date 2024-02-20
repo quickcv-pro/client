@@ -1,3 +1,3 @@
 git add .
-git commit -m "award section | complete"
+git commit -m "publication section | fetched succesfully"
 git push

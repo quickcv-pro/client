@@ -26,6 +26,7 @@ const Resume = () => {
   const [courseData, setCourseData] = useState([]);
   const [awardData, setAwardData] = useState([]);
   const [orgData, setOrgData] = useState([]);
+  const [pubData, setPubData] = useState([]);
 
   const handleInputChange = (data) => {
     setProfileData(data);
@@ -67,6 +68,10 @@ const Resume = () => {
     setOrgData(data);
   };
 
+   const handlePubInputChange = (data) => {
+     setPubData(data);
+   };
+
   return (
     <div className="resumeMainContainer">
       <ResumeTopbar />
@@ -82,7 +87,7 @@ const Resume = () => {
           <Course onCourseChange={handleCourseInputChange} />
           <Award onAwardChange={handleAwardInputChange} />
           <Organization onOrgChange={handleOrgInputChange} />
-          <Publication />
+          <Publication onPubChange={handlePubInputChange} />
           <Reference />
         </div>
         <ClassicDesigns
@@ -96,6 +101,7 @@ const Resume = () => {
           courseData={courseData}
           awardData={awardData}
           orgData={orgData}
+          pubData={pubData}
         />
       </div>
     </div>

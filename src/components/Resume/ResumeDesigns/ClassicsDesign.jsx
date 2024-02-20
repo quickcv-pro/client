@@ -1,12 +1,3 @@
-import {
-  AddLink,
-  ColorLens,
-  Email,
-  GitHub,
-  Home,
-  Language,
-  Phone,
-} from "@mui/icons-material";
 import "./assets/resumeDesigns.css";
 import SkillsDesign from "./SkillsDesign";
 import ProfileDesign from "./ProfileDesign";
@@ -17,6 +8,7 @@ import InterestDesign from "./InterestDesign";
 import ProjectDesign from "./ProjectDesign";
 import AwardDesign from "./AwardDesign";
 import OrganizationDesign from "./OrganizationDesign";
+import PublicationDesign from "./PublicationDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -29,8 +21,8 @@ const ClassicsDesign = ({
   courseData,
   awardData,
   orgData,
+  pubData,
 }) => {
-  // console.log(expData);
   return (
     <div className="resGeneralContainer">
       <ProfileDesign
@@ -153,6 +145,22 @@ const ClassicsDesign = ({
             startDate={org.startDate}
             endDate={org.endDate}
             info={org.info}
+          />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">PUBLICATION</p>
+      <div className="mainRowContainer">
+        {pubData.map((pub, index) => (
+          <PublicationDesign
+            key={index}
+            title={pub.title}
+            publisher={pub.publisher}
+            link={pub.link}
+            endDate={pub.endDate}
+            info={pub.info}
           />
         ))}
       </div>
