@@ -16,6 +16,7 @@ import CertificationDesign from "./CertificationDesign";
 import InterestDesign from "./InterestDesign";
 import ProjectDesign from "./ProjectDesign";
 import AwardDesign from "./AwardDesign";
+import OrganizationDesign from "./OrganizationDesign";
 
 const ClassicsDesign = ({
   profileData,
@@ -27,6 +28,7 @@ const ClassicsDesign = ({
   projectData,
   courseData,
   awardData,
+  orgData,
 }) => {
   // console.log(expData);
   return (
@@ -134,6 +136,23 @@ const ClassicsDesign = ({
             link={award.link}
             endDate={award.endDate}
             info={award.info}
+          />
+        ))}
+      </div>
+
+      <div className="classicLine"></div>
+      {/* Iterate over expData and render ExperienceDesign component */}
+      <p className="mainHeader">ORGANIZATIONS</p>
+      <div className="mainRowContainer">
+        {orgData.map((org, index) => (
+          <OrganizationDesign
+            key={index}
+            title={org.title}
+            position={org.position}
+            location={org.location}
+            startDate={org.startDate}
+            endDate={org.endDate}
+            info={org.info}
           />
         ))}
       </div>
