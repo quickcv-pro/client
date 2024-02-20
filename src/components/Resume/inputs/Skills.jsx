@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./assets/resumeinput.css";
 import {
   DeleteOutline,
+  Edit,
   ExpandMore,
   HomeRepairService,
   Remove,
@@ -12,6 +13,7 @@ const Skills = ({ onSkillsChange }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showInputFields, setShowInputFields] = useState(false); // New state to control input field visibility
   const [skillsList, setSkillsList] = useState([]); // Array to store skills and subskills
+  const [editingIndex, setEditingIndex] = useState(null); // State to track which item is being edited
 
   const [skillData, setSkillData] = useState({
     skill: "",
@@ -26,15 +28,38 @@ const Skills = ({ onSkillsChange }) => {
     setShowInputFields(true); // Show input fields when "Add" button is clicked
   };
 
-  const handleApplyButtonClick = () => {
-    if (skillData.skill && skillData.subSkill) {
-      setSkillsList([...skillsList, skillData]); // Add current skill and subskill to the skillsList array
-      setSkillData({ skill: "", subSkill: "" }); // Clear input fields
+const handleApplyButtonClick = () => {
+  // Check if at least one input field is not empty
+  if (skillData.skill || skillData.subSkill) {
+    if (editingIndex !== null) {
+      const updatedSkillsList = [...skillsList];
+      updatedSkillsList[editingIndex] = skillData;
+      setSkillsList(updatedSkillsList);
+      setEditingIndex(null);
+    } else {
+      setSkillsList([...skillsList, skillData]);
     }
+    setSkillData({ skill: "", subSkill: "" });
+  }
+};
+
+
+  const handleEditClick = (index) => {
+    // Set the data of the item being edited to input fields
+    const skillToEdit = skillsList[index];
+    setSkillData(skillToEdit);
+    setEditingIndex(index);
+    setShowInputFields(true);
+  };
+
+  const handleDeleteClick = (index) => {
+    // Remove the item from the skills list
+    const updatedSkillsList = [...skillsList];
+    updatedSkillsList.splice(index, 1);
+    setSkillsList(updatedSkillsList);
   };
 
   useEffect(() => {
-    // Notify the parent component about the changes whenever the skillsList changes
     onSkillsChange(skillsList);
   }, [skillsList, onSkillsChange]);
 
@@ -88,13 +113,22 @@ const Skills = ({ onSkillsChange }) => {
               >
                 <UnfoldMore sx={{ cursor: "grab" }} />
                 <p className="skillHeadScroll">{item.skill}</p>
-                {/* <p>{item.subSkill}</p> */}
-                <DeleteOutline className="deleteBtn" />
+                {/* <p className="skillHeadScroll">{item.subSkill}</p> */}
+                <div className="actionButtons">
+                  <Edit
+                    className="actionBtn"
+                    onClick={() => handleEditClick(index)}
+                  />
+                  <DeleteOutline
+                    className="actionBtn"
+                    onClick={() => handleDeleteClick(index)}
+                  />
+                </div>
               </div>
             ))}
           </div>
-          {showInputFields && ( // Show input fields only when showInputFields is true
-            <>
+          {showInputFields && (
+            <div className="formContainer">
               <div className="skillsFormInput">
                 <input
                   className="generalLongInput"
@@ -106,7 +140,7 @@ const Skills = ({ onSkillsChange }) => {
                 />
               </div>
               <div className="skillsFormInput">
-                <label>Informations/Sub-Skills</label>
+                {/* <label>Informations/Sub-Skills</label> */}
                 <textarea
                   className="generalTextArea"
                   type="text"
@@ -119,9 +153,9 @@ const Skills = ({ onSkillsChange }) => {
               <button className="saveButton" onClick={handleApplyButtonClick}>
                 Apply
               </button>
-            </>
+            </div>
           )}
-          {!showInputFields && ( // Show "Add" button when showInputFields is false
+          {!showInputFields && (
             <button className="addButton" onClick={handleAddButtonClick}>
               Add+
             </button>

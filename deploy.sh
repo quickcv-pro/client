@@ -1,3 +1,3 @@
 git add .
-git commit -m "started work experience"
+git commit -m "award section | complete"
 git push
