@@ -24,6 +24,10 @@
         margin: auto;
         overflow-x: hidden;
         overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        gap: 10px;
     }
     #donateOptionsCont::-webkit-scrollbar {
         width: 15px;
@@ -64,4 +68,22 @@
 #xIcon:hover{
     filter: none;
 
+}
+.paymentOpt {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 90%;
+    display: flex;
+    background: antiquewhite;
+    padding: 10px;
+    border-radius: 12px;
+}
+.paymentOpt img{
+    width: auto;
+    height: 30px;
+}
+.logoCont {
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
 }

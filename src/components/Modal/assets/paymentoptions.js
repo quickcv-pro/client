@@ -1,19 +1,19 @@
 const paymentOptions = [
     {
         Name: "Paystack",
-        Logo: "./assets/paystacklogo",
+        Logo: "/public/paymentPngs/paystacklogo.png",
     },
     {
         Name: "Stripe",
-        Logo: "./assets/Stripe-Logo.png",
+        Logo: "/public/paymentPngs/Stripe-Logo.png",
     },
     {
         Name: "PayPal",
-        Logo: "paypal.png",
+        Logo: "/public/paymentPngs/paypal.png",
     },
     {
         Name: "Budpay",
-        Logo: "R.png",
+        Logo: "/public/paymentPngs/R.png",
     }
 ]
 export default paymentOptions
