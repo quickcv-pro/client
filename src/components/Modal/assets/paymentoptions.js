@@ -15,5 +15,11 @@ const paymentOptions = [
         Name: "Budpay",
         Logo: "/public/paymentPngs/R.png",
     }
+    ,
+    {
+        Name: "By me a coffe",
+        Logo: "/public/paymentPngs/bmac.png",
+
+    }
 ]
 export default paymentOptions
