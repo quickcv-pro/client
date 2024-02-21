@@ -95,20 +95,22 @@ const Resume = () => {
           <Publication onPubChange={handlePubInputChange} />
           <Reference onRefChange={handleRefInputChange} />
         </div>
-        <ClassicDesigns
-          profileData={profileData}
-          skillData={skillData}
-          expData={expData}
-          eduData={eduData}
-          certData={certData}
-          interestData={interestData}
-          projectData={projectData}
-          courseData={courseData}
-          awardData={awardData}
-          orgData={orgData}
-          pubData={pubData}
-          refData={refData}
-        />
+        <div className="resumeDesigns">
+          <ClassicDesigns
+            profileData={profileData}
+            skillData={skillData}
+            expData={expData}
+            eduData={eduData}
+            certData={certData}
+            interestData={interestData}
+            projectData={projectData}
+            courseData={courseData}
+            awardData={awardData}
+            orgData={orgData}
+            pubData={pubData}
+            refData={refData}
+          />
+        </div>
       </div>
     </div>
   );

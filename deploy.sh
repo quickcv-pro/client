@@ -1,3 +1,3 @@
 git add .
-git commit -m "reference section | fetched succesfully and all other pages completed"
+git commit -m "resume ccs worked on"
 git push

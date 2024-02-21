@@ -1,4 +1,5 @@
-/* General design */
+/* RESUME COMPONENT */
+
 .mainRowContainer {
   display: flex;
   flex-direction: row;
@@ -19,8 +20,8 @@
 .resGeneralContainer {
   margin: 4vh 0;
   background-color: white;
-  width: 52vw;
-  height: 150vh;
+  width: 793.92px;
+  height: 1122.92px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

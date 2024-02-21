@@ -172,7 +172,7 @@ const Organization = ({ onOrgChange }) => {
               </div>
               <div className="skillsFormInput">
                 <input
-                  className="generalShortInput"
+                  className="generalLongInput"
                   type="text"
                   placeholder="Position"
                   name="position"
@@ -182,7 +182,7 @@ const Organization = ({ onOrgChange }) => {
               </div>
               <div className="skillsFormInput">
                 <input
-                  className="generalShortInput"
+                  className="generalLongInput"
                   type="text"
                   placeholder="Location"
                   name="location"
@@ -194,7 +194,7 @@ const Organization = ({ onOrgChange }) => {
                 <div className="profExpDates">
                   <label>Started</label>
                   <input
-                    className="profExpDateInput"
+                    className="generalShortInput"
                     type="date"
                     name="startDate"
                     value={orgData.startDate}
@@ -204,7 +204,7 @@ const Organization = ({ onOrgChange }) => {
                 <div className="profExpDates">
                   <label>Ended</label>
                   <input
-                    className="profExpDateInput"
+                    className="generalShortInput"
                     type="date"
                     name="endDate"
                     value={orgData.endDate}
@@ -217,8 +217,6 @@ const Organization = ({ onOrgChange }) => {
             </div> */}
               </div>
               <div className="skillsFormInput">
-                <label>Description</label>
-                name="endDate" name="endDate"
                 <textarea
                   className="generalTextArea"
                   type="text"
