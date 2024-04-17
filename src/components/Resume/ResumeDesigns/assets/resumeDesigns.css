@@ -31,7 +31,7 @@
 
 .classicLine {
   border: 1px solid black;
-  width: 48vw;
+  width: 40vw;
   margin: 2vh 0 1vh 0;
   display: flex;
   justify-content: center;
@@ -113,7 +113,8 @@
 /* SKILL DESIGN */
 .skillDesignContainer {
   display: flex;
-  flex-direction: column; /* Stack cards vertically */
+  flex-direction: column;
+  /* Stack cards vertically */
   justify-content: space-between;
 
   padding: 1vh 2vw;
@@ -226,8 +227,7 @@
 +++++++++++++++++++++++++++++++++++++++++
 */
 
-.mainCertContainer {
-}
+.mainCertContainer {}
 
 .certContainer {
   display: flex;
