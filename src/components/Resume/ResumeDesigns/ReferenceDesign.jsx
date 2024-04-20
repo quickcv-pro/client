@@ -2,7 +2,7 @@ import React from "react";
 
 const ReferenceDesign = (props) => {
   return (
-    <div>
+    <div className=" ml-[3rem]">
       <p>{props.name}</p>
       <p>{props.job}</p>
       <p>{props.company}</p>
