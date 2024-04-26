@@ -1,5 +1,5 @@
 .topbar {
- display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,6 @@
   background-color: var(
     --dark-color
   ); /* Adjust the background color for the fixed state */
-  
 }
 
 .topbarLogo {
@@ -76,15 +75,18 @@
   font-size: var(--very-small);
 }
 
-/* RESUME COMPONENT */
+
 .resumeComponent {
   display: flex;
   flex-direction: row;
   background-color: var(--light-color);
+  justify-content: center;
+  align-items: top;
 }
 
 .resumeContainer {
   height: 100%;
-  padding: 2vw;
+  padding: 1vw;
   overflow: none;
+  margin-top: 2vh;
 }

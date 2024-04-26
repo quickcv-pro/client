@@ -43,7 +43,7 @@ const ProfileInput = ({ onInputChange }) => {
       <div className="skillsHeader">
         <h1 className="skillsHero">
           <RememberMe sx={{ fontSize: "1.5vw" }} />
-          Profile
+          PROFILE
         </h1>
         <div className="skillsHero" onClick={handleExpandClick}>
           {isExpanded ? <Remove /> : <ExpandMore />}

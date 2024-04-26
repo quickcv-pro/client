@@ -172,7 +172,7 @@ const ProfessionalExp = ({ onExpChange }) => {
               </div>
               <div className="skillsFormInput">
                 <input
-                  className="generalShortInput"
+                  className="generalLongInput"
                   type="text"
                   placeholder="Company"
                   name="company"
@@ -182,7 +182,7 @@ const ProfessionalExp = ({ onExpChange }) => {
               </div>
               <div className="skillsFormInput">
                 <input
-                  className="generalShortInput"
+                  className="generalLongInput"
                   type="text"
                   placeholder="Location"
                   name="location"
@@ -194,7 +194,7 @@ const ProfessionalExp = ({ onExpChange }) => {
                 <div className="profExpDates">
                   <label>Started</label>
                   <input
-                    className="profExpDateInput"
+                    className="generalShortInput"
                     type="date"
                     name="startDate"
                     value={expData.startDate}
@@ -204,7 +204,7 @@ const ProfessionalExp = ({ onExpChange }) => {
                 <div className="profExpDates">
                   <label>Ended</label>
                   <input
-                    className="profExpDateInput"
+                    className="generalShortInput"
                     type="date"
                     name="stopDate"
                     value={expData.stopDate}

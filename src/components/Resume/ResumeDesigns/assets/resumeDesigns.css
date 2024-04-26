@@ -1,4 +1,5 @@
-/* General design */
+/* RESUME COMPONENT */
+
 .mainRowContainer {
   display: flex;
   flex-direction: row;
@@ -19,8 +20,8 @@
 .resGeneralContainer {
   margin: 4vh 0;
   background-color: white;
-  width: 52vw;
-  height: 150vh;
+  width: 793.92px;
+  height: 1122.92px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@
 
 .classicLine {
   border: 1px solid black;
-  width: 48vw;
+  width: 40vw;
   margin: 2vh 0 1vh 0;
   display: flex;
   justify-content: center;
@@ -112,7 +113,8 @@
 /* SKILL DESIGN */
 .skillDesignContainer {
   display: flex;
-  flex-direction: column; /* Stack cards vertically */
+  flex-direction: column;
+  /* Stack cards vertically */
   justify-content: space-between;
 
   padding: 1vh 2vw;
@@ -225,8 +227,7 @@
 +++++++++++++++++++++++++++++++++++++++++
 */
 
-.mainCertContainer {
-}
+.mainCertContainer {}
 
 .certContainer {
   display: flex;

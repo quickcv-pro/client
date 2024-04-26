@@ -1,3 +1,3 @@
 git add .
-git commit -m "award section | complete"
+git commit -m "resume ccs worked on"
 git push

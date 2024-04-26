@@ -5,7 +5,7 @@ import SignupForm from "./pages/Signup";
 import LoginForm from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
 import ResumePage from "./pages/Resume";
-
+import "./index.css";
 function App() {
   return (
     <>
